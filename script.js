@@ -14,13 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Auto-expand the matching <details> in Subject Details when its anchor is targeted
+  // Expand and highlight the matching box in Subject Details when its anchor is targeted
   const openDetailFromHash = () => {
+    document.querySelectorAll('.detail-card').forEach((el) => {
+      el.classList.remove('highlighted');
+      el.removeAttribute('open');
+    });
+
     const hash = window.location.hash;
     if (!hash) return;
     const target = document.querySelector(hash);
-    if (target && target.tagName.toLowerCase() === 'details') {
+    if (target && target.classList.contains('detail-card')) {
       target.setAttribute('open', '');
+      target.classList.add('highlighted');
     }
   };
 
