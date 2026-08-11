@@ -460,6 +460,18 @@ ul {
   display: block;
 }
 
+.booking-newtab-link {
+  text-align: center;
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.booking-newtab-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .contact-note {
   text-align: center;
   margin-top: 2rem;
