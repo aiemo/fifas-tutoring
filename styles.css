@@ -509,12 +509,14 @@ ul {
     align-items: center;
     gap: 0;
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     transition: max-height 0.3s ease;
   }
 
   .nav-links.open {
-    max-height: 320px;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
     border-bottom: 3px solid var(--accent);
   }
 
@@ -548,6 +550,18 @@ ul {
 
   .section-hint {
     margin-top: -0.5rem;
+  }
+
+  .nav-toggle {
+    padding: 0.65rem;
+  }
+
+  .policy-list-card {
+    padding: 1.5rem;
+  }
+
+  .form-embed iframe {
+    height: 420px;
   }
 }
 
